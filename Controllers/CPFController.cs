@@ -4,15 +4,19 @@ using Microsoft.AspNetCore.Mvc;
 [Route("cpf/")]
 public class CpfController : ControllerBase
 {
-   [HittGet("validate/{cpf}")]
-   public object validate([FromServices]CpfService CpfService,string cpf)
-   {
-       throw new NotImplementadException();
-   }
+    [HttpGet("validate/{cpf}")]
+    public object Validate(
+        [FromServices]CpfService cpfService,
+        string cpf)
+    {
+        throw new NotImplementedException();
+    }
 
-   [HittGet("generate")]
-   public object Generate([FromServices]CpfService CpfService)
-   {
-       throw new NotImplementadException();
-   }
+    [HttpGet("generate")]
+    public object Generate(
+        [FromServices]CpfService cpfService
+    )
+    {
+        throw new NotImplementedException();
+    }
 }

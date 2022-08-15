@@ -7,11 +7,11 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddSingleton<CpfServices>(p =>
+builder.Services.AddSingleton<CpfService>(p =>
 {
-    int seed = DataTime.Now.Millisecond;
-    CpfServices sevice = new CpfServices(seed);
-    return sevice;
+    int seed = DateTime.Now.Millisecond;
+    CpfService service = new CpfService(seed);
+    return service;
 });
 
 var app = builder.Build();
